@@ -29,7 +29,7 @@
                 <ColumnDefinition Width="660"/>
                 <ColumnDefinition Width="705"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical" Background="WhiteSmoke" Margin="10,0,0,0">
+            <StackPanel Orientation="Vertical" Background="WhiteSmoke" Margin="0,0,0,0">
                 <StackPanel.Effect>
                     <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
                 </StackPanel.Effect>
