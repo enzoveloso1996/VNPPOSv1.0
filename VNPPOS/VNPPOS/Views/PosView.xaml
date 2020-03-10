@@ -26,7 +26,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <Image Source="/Resources/logo.png" Grid.Row="0" Width="130" Height="40" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Image Source="/Resources/logo.png" Grid.Row="0" Width="160" Height="45" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <TextBlock Margin="0,0,130,0" FontFamily="Global Sans Serif" FontSize="18" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right">Welcome, User</TextBlock>
             <Button Content="Logout" VerticalAlignment="Center" Width="90" Height="60" HorizontalAlignment="Right" FontSize="15" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" Margin="0,0,10,0"/>
         </Grid>
@@ -55,12 +55,8 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1" Width="auto" Height="auto" Margin="5,0,0,0" Background="WhiteSmoke">
-                <StackPanel Width="auto" Height="auto">
-                    <StackPanel.Effect>
-                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
-                    </StackPanel.Effect>
-                    <TextBox
-                        VerticalAlignment="Center"
+                <!--<TextBox
+                        VerticalAlignment="Top"
                         HorizontalAlignment="Stretch"
                         Width="auto"
                         Height="50"
@@ -68,10 +64,10 @@
                         HorizontalContentAlignment="Center"
                         Background="{x:Null}"
                         TextAlignment="Center" BorderBrush="#FF0D4F4C" BorderThickness="2" SelectionBrush="{x:Null}" Opacity="0.5">
-                        <TextBox.Template>
-                            <ControlTemplate TargetType="{x:Type TextBox}">
-                                <Grid>
-                                    <TextBox
+                    <TextBox.Template>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Grid>
+                                <TextBox
                                 VerticalContentAlignment="Center"
                                 Background="{x:Null}"
                                 BorderThickness="2"
@@ -79,26 +75,354 @@
                                 FontSize="25"
                                 Foreground="Black"
                                 Text="{TemplateBinding Text}" SelectionBrush="{x:Null}" BorderBrush="#FF0D4F4C" CaretBrush="{x:Null}">
-                                        <TextBox.Effect>
-                                            <DropShadowEffect Color="#FF666666" BlurRadius="3" ShadowDepth="3" RenderingBias="Quality" Opacity="0.3"/>
-                                        </TextBox.Effect>
-                                    </TextBox>
-                                    <Image
+                                    <TextBox.Effect>
+                                        <DropShadowEffect Color="#FF666666" BlurRadius="3" ShadowDepth="3" RenderingBias="Quality" Opacity="0.3"/>
+                                    </TextBox.Effect>
+                                </TextBox>
+                                <Image
                                 Width="35"
                                 Height="35"
                                 Margin="10,0,0,0"
                                 HorizontalAlignment="Left"
                                 Source="/Resources/icons8-search-24.png" />
+                            </Grid>
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>-->
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+                    <ScrollViewer x:Name="shirts" Height="auto" Width="auto" Margin="10,0" HorizontalScrollBarVisibility="Visible">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions> 
+                                <RowDefinition Height="250"/>
+                                <RowDefinition Height="250"/>
+                                <RowDefinition Height="250"/>
+                            </Grid.RowDefinitions>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="0" Grid.Row="0" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
                                 </Grid>
-                            </ControlTemplate>
-                        </TextBox.Template>
-                    </TextBox>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="1" Grid.Row="0" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="2" Grid.Row="0" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="3" Grid.Row="0" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="0" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="1" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="2" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="4" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="0" Grid.Row="2" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="1" Grid.Row="2" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="2" Grid.Row="2" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="3" Grid.Row="2" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Shirt1" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="5,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            Available
+                                        </materialDesign:Chip>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                        </Grid>
+                    </ScrollViewer>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2" Width="auto" Height="auto" Margin="5,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="380"/>
                     <RowDefinition Height="200"/>
                     <RowDefinition Height="110"/>
                 </Grid.RowDefinitions>
@@ -126,7 +450,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
-                            <TextBlock Text="SUB TOTAL" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>                   
+                            <TextBlock Text="SUB TOTAL" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>
                             <TextBlock Text="TOTAL DISCOUNT" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>
                             <TextBlock Text="VAT" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,0"/>
                         </StackPanel>
@@ -158,7 +482,7 @@
                             Grid.Row="0"
                             Style="{StaticResource MaterialDesignOutlinedButton}"
                             Width="auto"
-                            Height="50"
+                            Height="40"
                             Margin="20,0,40,0"
                             BorderThickness="2,2,2,2"
                             FontFamily="Global Sans Serif"
@@ -171,7 +495,7 @@
                             Grid.Row="1"
                             Style="{StaticResource MaterialDesignOutlinedButton}"
                             Width="auto"
-                            Height="50"
+                            Height="40"
                             Margin="20,0,40,0"
                             BorderThickness="2,2,2,2"
                             FontFamily="Global Sans Serif"
@@ -187,7 +511,7 @@
                                 Width="auto"
                                 materialDesign:ButtonAssist.CornerRadius="20"
                                 ToolTip="MaterialDesignRaisedButton with Round Corners" Margin="0,10" Background="#FF0D4F4C" BorderBrush="{x:Null}">
-                            <TextBlock Text="PAY OUT" FontFamily="Global Sans Serif" FontSize="30"/>
+                            <TextBlock Text="PROCEED" FontFamily="Global Sans Serif" FontSize="30"/>
                         </Button>
                     </Grid>
                 </Grid>

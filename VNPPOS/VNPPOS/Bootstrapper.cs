@@ -18,7 +18,7 @@ namespace VNPPOS
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<PosViewModel>();
+            DisplayRootViewFor<LoginViewModel>();
         }
     }
 }
