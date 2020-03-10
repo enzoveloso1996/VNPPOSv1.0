@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VNPPOS.Views"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="PosView" Height="{Binding SystemParameters.PrimaryScreenHeight}" 
-        Width="{Binding SystemParameters.PrimaryScreenWidth}" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFD3D8D8">
+        Width="{Binding SystemParameters.PrimaryScreenWidth}" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFD3D8D8" d:DesignWidth="1612" d:DesignHeight="690.6">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -20,71 +27,171 @@
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
             <Image Source="/Resources/logo.png" Grid.Row="0" Width="130" Height="40" Stretch="Fill" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <TextBlock Margin="0,0,150,0" FontFamily="Global Sans Serif" FontSize="18" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right">Welcome, User</TextBlock>
-            <Button Content="Logout" VerticalAlignment="Center" Width="90" Height="60" HorizontalAlignment="Right" FontSize="18" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            <TextBlock Margin="0,0,130,0" FontFamily="Global Sans Serif" FontSize="18" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right">Welcome, User</TextBlock>
+            <Button Content="Logout" VerticalAlignment="Center" Width="90" Height="60" HorizontalAlignment="Right" FontSize="15" FontWeight="Bold" FontFamily="Global Sans Serif" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" Margin="0,0,10,0"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Grid.Row="1" Margin="0,20,0,0">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Margin="0,5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="230"/>
-                <ColumnDefinition Width="660"/>
-                <ColumnDefinition Width="705"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical" Background="WhiteSmoke" Margin="10,0,0,0">
-                <StackPanel.Effect>
-                    <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
-                </StackPanel.Effect>
-                <TextBlock FontFamily="Global Sans Serif" FontSize="24" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30">Categories</TextBlock>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Left">T-Shirts</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Left">Jackets</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Left">Polo</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Left">Pants</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Left">Shorts</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Left">Bags</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,4" HorizontalAlignment="Left">Caps</Button>
-                <Button VerticalAlignment="Center" Width="200" Height="50" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,4" HorizontalAlignment="Left">Accessories</Button>
-            </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20,0" Background="WhiteSmoke">
-                <StackPanel.Effect>
-                    <DropShadowEffect Color="#FF424242" BlurRadius="3" ShadowDepth="3" Opacity="0.5" Direction="350"/>
-                </StackPanel.Effect>
-                <TextBox
-                Width="390"
-                Height="40"
-                Margin="0,10"
-                HorizontalContentAlignment="Center"
-                Background="{x:Null}"
-                TextAlignment="Center" BorderBrush="#FF0D4F4C" BorderThickness="2" SelectionBrush="{x:Null}" Opacity="0.5">
-                    <TextBox.Template>
-                        <ControlTemplate TargetType="{x:Type TextBox}">
-                            <Grid>
-                                <TextBox
+            <Grid Background="WhiteSmoke" Margin="5,0,0,0" Grid.Column="0">
+                <StackPanel Orientation="Vertical" Width="auto" Height="auto">
+                    <StackPanel.Effect>
+                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
+                    </StackPanel.Effect>
+                    <TextBlock FontFamily="Global Sans Serif" FontSize="24" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30">Categories</TextBlock>
+                    <StackPanel VerticalAlignment="Center" Margin="0">
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">T-Shirts</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Jackets</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Polo</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Pants</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Shorts</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Bags</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Caps</Button>
+                        <Button VerticalAlignment="Center" Width="auto" Height="70" FontFamily="Global Sans Serif" FontSize="20" Background="#FF0D4F4C" Foreground="White" Margin="0,0,0,3" HorizontalAlignment="Stretch" BorderBrush="{x:Null}">Accessories</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Width="auto" Height="auto" Margin="5,0,0,0" Background="WhiteSmoke">
+                <StackPanel Width="auto" Height="auto">
+                    <StackPanel.Effect>
+                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
+                    </StackPanel.Effect>
+                    <TextBox
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Stretch"
+                        Width="auto"
+                        Height="50"
+                        Margin="80,10"
+                        HorizontalContentAlignment="Center"
+                        Background="{x:Null}"
+                        TextAlignment="Center" BorderBrush="#FF0D4F4C" BorderThickness="2" SelectionBrush="{x:Null}" Opacity="0.5">
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Grid>
+                                    <TextBox
+                                VerticalContentAlignment="Center"
                                 Background="{x:Null}"
                                 BorderThickness="2"
                                 FontFamily="Consolas"
-                                FontSize="24"
-                                Foreground="#FF0D4F4C"
-                                Text="{TemplateBinding Text}" SelectionBrush="{x:Null}" BorderBrush="#FF0D4F4C">
-                                    <TextBox.Effect>
-                                        <DropShadowEffect Color="#FF666666" BlurRadius="3" ShadowDepth="3" RenderingBias="Quality" Opacity="0.3"/>
-                                    </TextBox.Effect>
-                                </TextBox>
-                                <Image
+                                FontSize="25"
+                                Foreground="Black"
+                                Text="{TemplateBinding Text}" SelectionBrush="{x:Null}" BorderBrush="#FF0D4F4C" CaretBrush="{x:Null}">
+                                        <TextBox.Effect>
+                                            <DropShadowEffect Color="#FF666666" BlurRadius="3" ShadowDepth="3" RenderingBias="Quality" Opacity="0.3"/>
+                                        </TextBox.Effect>
+                                    </TextBox>
+                                    <Image
                                 Width="35"
                                 Height="35"
                                 Margin="10,0,0,0"
                                 HorizontalAlignment="Left"
                                 Source="/Resources/icons8-search-24.png" />
-                            </Grid>
-                        </ControlTemplate>
-                    </TextBox.Template>
-                </TextBox>
-                
-            </StackPanel>
-            <StackPanel Grid.Column="2" Background="WhiteSmoke" Margin="0,0,10,0">
-                <StackPanel.Effect>
-                    <DropShadowEffect BlurRadius="3" ShadowDepth="3" Direction="350" Opacity="0.5" RenderingBias="Quality" Color="#FF7E7E7E"/>
-                </StackPanel.Effect>
-            </StackPanel>
+                                </Grid>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2" Width="auto" Height="auto" Margin="5,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="110"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="WhiteSmoke" Margin="0,0,0,5">
+                    <Grid.Effect>
+                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
+                    </Grid.Effect>
+                </Grid>
+                <Grid Grid.Row="1" Background="WhiteSmoke" Margin="0,0,0,5">
+                    <Grid.Effect>
+                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
+                    </Grid.Effect>
+                </Grid>
+                <Grid Grid.Row="2" Background="WhiteSmoke" Margin="0,0,0,5">
+                    <Grid.Effect>
+                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
+                    </Grid.Effect>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Background="#FF0D4F4C">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <TextBlock Text="SUB TOTAL" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>                   
+                            <TextBlock Text="TOTAL DISCOUNT" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>
+                            <TextBlock Text="VAT" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                            <TextBlock HorizontalAlignment="Right" Text="0.00" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>
+                            <TextBlock HorizontalAlignment="Right" Text="0.00" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,5"/>
+                            <TextBlock HorizontalAlignment="Right" Text="0.00" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="1" Background="#FF137A75">
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="TOTAL BILL" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="10,0,0,0"/>
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="0.00" FontFamily="Global Sans Serif" FontSize="30" Foreground="#DDFFFFFF" Margin="0,0,10,0"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3" Background="WhiteSmoke">
+                    <Grid.Effect>
+                        <DropShadowEffect Direction="350" BlurRadius="3" ShadowDepth="3" Color="#FF424242" RenderingBias="Quality" Opacity="0.5"/>
+                    </Grid.Effect>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="398*"/>
+                        <ColumnDefinition Width="279*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Margin="30,5,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Button
+                            Grid.Row="0"
+                            Style="{StaticResource MaterialDesignOutlinedButton}"
+                            Width="auto"
+                            Height="50"
+                            Margin="20,0,40,0"
+                            BorderThickness="2,2,2,2"
+                            FontFamily="Global Sans Serif"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            BorderBrush="#FF0D4F4C" Foreground="#FF0D4F4C" Content="Discount"/>
+                        <Button
+                            Grid.Row="1"
+                            Style="{StaticResource MaterialDesignOutlinedButton}"
+                            Width="auto"
+                            Height="50"
+                            Margin="20,0,40,0"
+                            BorderThickness="2,2,2,2"
+                            FontFamily="Global Sans Serif"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            BorderBrush="#FF0D4F4C" Foreground="#FF0D4F4C" Content="Void"/>
+                    </Grid>
+                    <Grid Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,30,0" Width="213">
+                        <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                                Height="auto"
+                                Width="auto"
+                                materialDesign:ButtonAssist.CornerRadius="20"
+                                ToolTip="MaterialDesignRaisedButton with Round Corners" Margin="0,10" Background="#FF0D4F4C" BorderBrush="{x:Null}">
+                            <TextBlock Text="PAY OUT" FontFamily="Global Sans Serif" FontSize="30"/>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

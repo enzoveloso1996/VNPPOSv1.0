@@ -5,16 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VNPPOS.Views"
         mc:Ignorable="d" 
-        Title="LoginView" Background="WhiteSmoke"  Height="{Binding SystemParameters.PrimaryScreenHeight}" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="LoginView" Background="WhiteSmoke" MinHeight="600" MinWidth="400" Height="{Binding SystemParameters.PrimaryScreenHeight}" 
         Width="{Binding SystemParameters.PrimaryScreenWidth}" WindowState="Maximized">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/wallpaper.jpg" Stretch="UniformToFill" />
         </Grid.Background>
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Center">
         <StackPanel
             Margin="0,0,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
             Orientation="Vertical">
             <Image
                 Width="350"
@@ -22,90 +29,64 @@
                 Margin="0,0,0,20"
                 Source="/Resources/logo.png"
                 Stretch="UniformToFill" />
-            <TextBox
-                Width="390"
-                Height="40"
-                Margin="0,0,0,10"
-                HorizontalContentAlignment="Center"
-                Background="{x:Null}"
-                TextAlignment="Center">
-                <TextBox.Template>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Grid>
-                            <TextBox
-                                Background="{x:Null}"
-                                BorderBrush="#FF0D4F4C"
-                                BorderThickness="0,0,0,3"
-                                FontFamily="Consolas"
-                                FontSize="24"
-                                Foreground="White"
-                                Text="{TemplateBinding Text}" />
-                            <Image
-                                Width="35"
-                                Height="40"
-                                Margin="0,0,10,0"
-                                HorizontalAlignment="Left"
-                                Source="/Resources/icons8-user-24.png" />
-                        </Grid>
-                    </ControlTemplate>
-                </TextBox.Template>
-            </TextBox>
-            <TextBox
-                Width="390"
-                Height="40"
-                Margin="0,0,0,10"
-                HorizontalContentAlignment="Center"
-                Background="{x:Null}"
-                TextAlignment="Center">
-                <TextBox.Template>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Grid>
-                            <TextBox
-                                Background="{x:Null}"
-                                BorderBrush="#FF0D4F4C"
-                                BorderThickness="0,0,0,3"
-                                FontFamily="Consolas"
-                                FontSize="24"
-                                Foreground="White"
-                                Text="{TemplateBinding Text}" />
-                            <Image
-                                Width="35"
-                                Height="40"
-                                Margin="0,0,10,0"
-                                HorizontalAlignment="Left"
-                                Source="/Resources/icons8-lock-24.png" />
-                        </Grid>
-                    </ControlTemplate>
-                </TextBox.Template>
-            </TextBox>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="User" Width="40" Height="50" Foreground="#DDFFFFFF" Margin="0,0,10,0"/>
+                    <TextBox x:Name="NameTextBox"
+                     HorizontalContentAlignment="Center"
+                    Width="340"
+                    Height="40"
+                    BorderThickness="0,0,0,3"
+                    FontFamily="Consolas"
+                    FontSize="24"
+                    Margin="0,0,0,10"
+                    materialDesign:HintAssist.Hint="Username"
+                    BorderBrush="#FF0D4F4C" CaretBrush="#FF0D4F4C" Foreground="#DDFFFFFF" SelectionBrush="#FF37706D"/>
+                </StackPanel>
+            </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="LockOpen" Width="40" Height="50" Foreground="#DDFFFFFF" Margin="0,0,10,0"/>
+                    <TextBox HorizontalContentAlignment="Center"
+                            Width="340"
+                            Height="40"
+                            BorderThickness="0,0,0,3"
+                            FontFamily="Consolas"
+                            FontSize="24"
+                            Margin="0,0,0,10"
+                            materialDesign:HintAssist.Hint="Password"
+                            BorderBrush="#FF0D4F4C" CaretBrush="#FF0D4F4C" Foreground="#DDFFFFFF" SelectionBrush="#FF37706D"/>
+                </StackPanel>
+            </Grid>
             <Button
-                Width="390"
-                Height="35"
+                Style="{StaticResource MaterialDesignOutlinedButton}"
+                Width="380"
+                Height="40"
                 Margin="0,0,0,10"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Bottom"
-                Background="{x:Null}"
-                BorderBrush="#FF0D1515"
                 BorderThickness="3,3,3,3"
-                Content="Login"
                 FontFamily="Consolas"
                 FontSize="20"
                 FontWeight="Bold"
-                Foreground="White" />
-            <Button
-                Width="390"
-                Height="35"
-                Margin="0,0,0,10"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Bottom"
-                Background="{x:Null}"
-                BorderBrush="#FF0D1515"
+                BorderBrush="Black" Foreground="White">
+                Login
+            </Button>
+            <Button
+                Style="{StaticResource MaterialDesignOutlinedButton}"
+                Width="380"
+                Height="40"
+                Margin="0,0,0,10"
                 BorderThickness="3,3,3,3"
-                Content="Exit"
                 FontFamily="Consolas"
                 FontSize="20"
                 FontWeight="Bold"
-                Foreground="White" />
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Bottom"
+                BorderBrush="Black" Foreground="White">
+                Exit
+            </Button>
         </StackPanel>
+        </Grid>
     </Grid>
 </Window>
