@@ -133,7 +133,7 @@
                 </TextBox>-->
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
                     <!-- Shirts -->
-                    <ScrollViewer x:Name="shirts" Height="auto" Width="auto" Margin="10,0" HorizontalScrollBarVisibility="Visible" Visibility="Visible">
+                    <ScrollViewer x:Name="shirts" Height="auto" Width="auto" Margin="10,0" HorizontalScrollBarVisibility="Visible" Visibility="Collapsed">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
@@ -450,7 +450,7 @@
                                 <RowDefinition Height="250"/>
                                 <RowDefinition Height="250"/>
                             </Grid.RowDefinitions>
-                            <!--<materialDesign:Card Width="auto" Height="auto" 
+                            <materialDesign:Card Width="auto" Height="auto" 
                                                  Grid.Column="0" Grid.Row="0" Margin="5">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -461,7 +461,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 10.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -485,7 +485,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 9.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -509,7 +509,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 8.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -533,7 +533,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 7.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -557,7 +557,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 6.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -581,7 +581,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 5.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -605,7 +605,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 4.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -629,7 +629,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 3.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -653,7 +653,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="sleeves 2.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -665,7 +665,7 @@
                                             VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
                                     </Grid>
                                 </Grid>
-                            </materialDesign:Card>-->
+                            </materialDesign:Card>
                         </Grid>
                     </ScrollViewer>
                     <!-- Polo -->
@@ -770,7 +770,7 @@
                                 <RowDefinition Height="250"/>
                                 <RowDefinition Height="250"/>
                             </Grid.RowDefinitions>
-                            <!--<materialDesign:Card Width="auto" Height="auto" 
+                            <materialDesign:Card Width="auto" Height="auto" 
                                                  Grid.Column="0" Grid.Row="0" Margin="5">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -781,7 +781,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="pants1.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -805,7 +805,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="pants 8.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -829,7 +829,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="pants 6.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -853,7 +853,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="pants 3.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -865,7 +865,55 @@
                                             VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
                                     </Grid>
                                 </Grid>
-                            </materialDesign:Card>-->
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="0" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="pants 7.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="PNT001" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="1,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="1" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="pants 2.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="PNT001" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="1,000.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
                         </Grid>
                     </ScrollViewer>
                     <!-- Bag -->
@@ -1093,7 +1141,7 @@
                         </Grid>
                     </ScrollViewer>
                     <!-- Caps -->
-                    <ScrollViewer x:Name="caps" Height="auto" Width="auto" Margin="10,0" HorizontalScrollBarVisibility="Visible" Visibility="Collapsed">
+                    <ScrollViewer x:Name="caps" Height="auto" Width="auto" Margin="10,0" HorizontalScrollBarVisibility="Visible" Visibility="Visible">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
@@ -1106,7 +1154,7 @@
                                 <RowDefinition Height="250"/>
                                 <RowDefinition Height="250"/>
                             </Grid.RowDefinitions>
-                            <!--<materialDesign:Card Width="auto" Height="auto" 
+                            <materialDesign:Card Width="auto" Height="auto" 
                                                  Grid.Column="0" Grid.Row="0" Margin="5">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -1117,7 +1165,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="cap4.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -1141,7 +1189,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="cap5.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -1165,7 +1213,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="cap1.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -1189,7 +1237,7 @@
                                     <Grid VerticalAlignment="Top"
                                       Width="auto" Height="130">
                                         <Grid.Background>
-                                            <ImageBrush ImageSource="/VNPPOS;component/Resources/tshirts/shirt.jpg" Stretch="UniformToFill"/>
+                                            <ImageBrush ImageSource="cap.jpg" Stretch="UniformToFill"/>
                                         </Grid.Background>
                                     </Grid>
                                     <Grid Width="auto" Grid.Row="1">
@@ -1201,7 +1249,55 @@
                                             VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
                                     </Grid>
                                 </Grid>
-                            </materialDesign:Card>-->
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="0" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="cap6.jpg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="CP001" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="850.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+                            <materialDesign:Card Width="auto" Height="auto" 
+                                                 Grid.Column="1" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="130"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid VerticalAlignment="Top"
+                                      Width="auto" Height="130">
+                                        <Grid.Background>
+                                            <ImageBrush ImageSource="cap3.jpeg" Stretch="UniformToFill"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="1">
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="CP001" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="850.00" FontSize="20" FontFamily="Sans" FontWeight="Bold"/>
+                                    </Grid>
+                                    <Grid Width="auto" Grid.Row="2">
+                                        <materialDesign:Chip
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" Content="Available"/>
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
                         </Grid>
                     </ScrollViewer>
                 </StackPanel>
